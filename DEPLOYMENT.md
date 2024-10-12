@@ -1,4 +1,7 @@
-## Install Django and packages
+## Install Django and packages, Create Django Project, Run Server and allow hosts
+
+<details>
+<summary>Click me</summary>
 
 - Install django with *pip3 install django~=4.2.1*
 - Install gunicorn with *pip3 install gunicorn ~=20.1*
@@ -22,3 +25,42 @@ Using the command *python3 manage.py runserver* opens the server in port 8000. T
 ![Disallowed host](docs/local_deployment/03-disallowed-host.png)
 
 ![Successful project](docs/local_deployment/04-install-succesful.png)
+
+</details>
+
+## Heroku Deployment
+
+<details>
+<summary>Click me</summary>
+
+Navigate to your Heroku dashboard and create a new Heroku app.
+
+![Start app](docs/heroku_deployment/01-start-app.png)
+
+![Create app](docs/heroku_deployment/02-create-app.png)
+
+Add DISABLE_COLLECTSTATIC with a Value of 1 to stop Heroku uploading static files.
+
+![DISABLE_COLLECTSTATIC](docs/heroku_deployment/03-collectstatic.png)
+
+Create a Procfile to allow Heroku to deploy using Gunicorn.
+
+![Procfile](docs/heroku_deployment/04-procfile.png)
+
+Add Heroku to allowed hosts in elite_cuisine/settings.py.
+
+![Heroku host](docs/heroku_deployment/05-heroku-host.png)
+
+Connect Heroku to your Github account.
+
+![Connect Github](docs/heroku_deployment/06-connect-github.png)
+
+Click deploy branch and wait for completion.
+
+![deploy](docs/heroku_deployment/07-deploy.png)
+
+Add Eco Dynos.
+
+![Heroku host](docs/heroku_deployment/05-heroku-host.png)
+
+</details>
