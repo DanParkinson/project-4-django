@@ -1,0 +1,10 @@
+## Install Django and packages
+
+- Install django with *pip3 install django~=4.2.1*
+- Install gunicorn with *pip3 install gunicorn ~=20.1*
+- Install whitenoise with *pip3 install whitenoise~=6.5.0*
+- Install psycopg2 and dj_database_url with *pip3 install dj_database_url~=0.5 psycopg2~=2.9*
+
+- Use command *pip3 freeze --local > requirements.txt* to create requirements.txt and add relavent packages to it.
+
+![requirements.txt after install](docs/local_deployment/01-requirements.txt.png)
