@@ -32,6 +32,23 @@ Use command python3 manage.py runserver to check the home app is linked correctl
 
 ## Super User
 
+<details>
+<summary>Click me</summary>
+
+When i originally tried to login as a superuser i recieved this error.
+
+![Error](docs/testing/admin-test-01.png)
+
+After using code institute support i had forgotten to add.
+
+![CSFR](docs/testing/admin-test-02.png)
+
+Admin login now functions correctly.
+
+![Admin Page](docs/testing/admin-test-03.png)
+
+</details>
+
 ## Creating Templates 
 
 ## Connecting CSS and JS
