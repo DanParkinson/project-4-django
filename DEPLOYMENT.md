@@ -7,4 +7,11 @@
 
 - Use command *pip3 freeze --local > requirements.txt* to create requirements.txt and add relavent packages to it.
 
-![requirements.txt after install](docs/local_deployment/01-requirement.png)
+![requirements.txt after install](docs/local_deployment/01-requirements.png)
+
+## Create Django Project 
+
+- Using the command *django-admin startproject elite .* creates our django project.
+
+![Django Project Directory](docs/local_deployment/02-django-project.png)
+
