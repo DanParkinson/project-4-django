@@ -30,7 +30,8 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 DEBUG = True
 
 ALLOWED_HOSTS = ['8000-danparkinso-project4dja-yd2fkp560jx.ws.codeinstitute-ide.net',
-                'herokuapp.com']
+                'herokuapp.com',
+                'project-4-elite-cf74f1a0a1a8.herokuapp.com']
 
 
 # Application definition
