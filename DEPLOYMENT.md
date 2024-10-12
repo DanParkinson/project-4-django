@@ -89,3 +89,42 @@ Use dj-databse-url to connect.
 </details>
 
 ## Create super user
+
+<details>
+<summary>Click me</summary>
+
+- Using the terminal command *python3 manage.py migrate*, create a database.
+- Create a superuser using djangos built in admin and auth apps using temrinal command python3 manage.py createsuperuser.
+
+</details>
+
+## Connect Heroku to the postgreSQL
+
+<details>
+<summary>Click me</summary>
+
+- Deploy a new branch in Heroku.
+
+- Create a new convig-var using the name DATABASE-URL and a value of your postgreSQL. This connects Heroku to the postgreSQL.
+
+![ConfigVar](docs/heroku_deployment/13-heroku-postgresql.png)
+
+</details>
+
+## Secret Key 
+
+<details>
+<summary>Click me</summary>
+
+Generate a secret key using letters, numbers and symbols that is hard to guess. This is used to keep information private. Add it to the env.py file with the following code.
+
+![env secret key](docs/heroku_deployment/14-secret-key.png)
+
+Update the settings.py file.
+
+![Settings secret key](docs/heroku_deployment/15-secret-key-settings.png)
+
+Add secret key as a config-var to Heroku. The name should be SECRET_KEY. The value should be your secret key value.
+If done correctly, both local and Heroku deployment should work.
+
+</details>
