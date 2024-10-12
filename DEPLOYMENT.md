@@ -87,3 +87,5 @@ Use dj-databse-url to connect.
 ![dj_database](docs/heroku_deployment/12-database.png)
 
 </details>
+
+## Create super user
