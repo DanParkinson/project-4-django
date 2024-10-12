@@ -7,4 +7,4 @@
 
 - Use command *pip3 freeze --local > requirements.txt* to create requirements.txt and add relavent packages to it.
 
-![requirements.txt after install](docs/local_deployment/01-requirements.txt.png)
+![requirements.txt after install](docs/local_deployment/01-requirement.png)
