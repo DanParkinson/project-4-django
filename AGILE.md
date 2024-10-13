@@ -44,4 +44,21 @@ Focus for the next session is to do with setting up templates to have a view of 
 
 ![Phase2](docs/agile/phase2.png)
 
+With the templates linked, CSS and JS loading in the deployed version its time to make some models. Reservations will be first. 
+
+</details>
+
+## Phase 3
+
+<details>
+<summary>Click me</summary>
+
+Focus for Phase 3 is creating a reservations model. I need a form for users to submit their reservations times. This needs to be saved to the database. I would like to create authentication but I need to research this a bit more as my understanding isnt quite where I would like it to be.
+
+- forms needed for reservation submited
+- model 
+- views
+- urls 
+
+
 </details>
