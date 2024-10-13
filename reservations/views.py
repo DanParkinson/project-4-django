@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .forms import ReservationForm # Imports form for reservation
+from .models import Reservation
 
 # Create your views here.
 
