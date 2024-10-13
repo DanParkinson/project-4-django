@@ -4,29 +4,44 @@ This is where I will document my agile approach. It will be set into phases to h
 
 ## Phase 1
 
-- Setup repo
-- Create Django project
-- Install basic dependencies and add to requirements
-- Create procfile to deploy to Heroku
-- Create app on Heroku
-- Link GitHub repo to Heroku app
-- Test to deploy working project ASAP
-- Document project creation and deployment
-- Perform design thinking exercise for features to include in project
-- Add user stories to readme
-- Add wireframes to readme
-- Mock up initial database design and document in readme
-- List and link technologies used in readme
-- Learn to use GitHub projects. Create user stories
+<details>
+<summary>Click me</summary>
+
+- Setup repo.
+- Create Django project.
+- Install basic dependencies and add to requirements.
+- Create procfile to deploy to Heroku.
+- Create app on Heroku.
+- Link GitHub repo to Heroku app.
+- Test to deploy working project ASAP.
+- Document project creation and deployment.
+- Perform design thinking exercise for features to include in project.
+- Add user stories to readme.
+- Add wireframes to readme.
+- Mock up initial database design and document in readme.
+- List and link technologies used in readme.
+- Learn to use GitHub projects. Create user stories.
 
 Still to do:
 - Identify a colour schema to use in the site
 
+![Phase1](docs/agile/phase1.png)
+
+</details>
+
 ## Phase 2
+
+<details>
+<summary>Click me</summary>
 
 Focus for the next session is to do with setting up templates to have a view of the home page. As well as this I will create my user stories in github projects for Phase 1, phase 2 and my overall User Stories to outline the project. 
 
-- Setup base.html
-- create separate components for site such as head, header, navbar, footer in a subfolder to inject into base.html
-- Setup index page in home app
-- Build navigation
+- Setup base.html.
+- create separate components for site such as head, header, navbar, footer in a subfolder to inject into base.html.
+- Setup index page in home app.
+- Build navigation.
+- Set up styling basics and check with deployed Heroku app.
+
+![Phase2](docs/agile/phase2.png)
+
+</details>
