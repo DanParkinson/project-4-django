@@ -16,9 +16,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from home import views as index_views
 
 urlpatterns = [
-    path('', index_views.index, name='home'),
+    path('', include('home.urls')),  # Points to the home app
     path('admin/', admin.site.urls),
 ]
