@@ -60,5 +60,11 @@ Focus for Phase 3 is creating a reservations model. I need a form for users to s
 - views
 - urls 
 
+Now that I have a form to submit, a database to save the information and the admin panel is styled nicely. We need to add validation to the submittable form.
+
+- Opening hours
+- Date that hasnt happened yet
+- Number of people capped at 8 
+
 
 </details>
