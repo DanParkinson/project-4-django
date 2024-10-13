@@ -4,9 +4,14 @@ from django.utils import timezone
 class ReservationForm(forms.Form):
     name = forms.CharField(max_length=100, label='Name')
     email = forms.EmailField(label='Email')
-    phone_number = forms.CharField(max_length=15, label='Phone Number')
     number_of_guests = forms.IntegerField(min_value=1, label='Number of Guests', max_value='8')
     special_occasion = forms.CharField(max_length=200, required=False, label='Special Occasion')
+
+    # set phone number to allow only numbers
+    phone_number = forms.IntegerField(
+        min_value='0',
+        error_messages={'Invalid' : 'Phone number must be number.'},
+        label='Phone Number')
 
     # Set date to current day and onwards
     # get todays date
