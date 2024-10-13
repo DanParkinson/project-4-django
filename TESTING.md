@@ -107,3 +107,6 @@ Check server loads message in developer tools.
 ![JS](docs/heroku_deployment/26-jsmessage.png)
 
 </details>
+
+## Reservations app 
+
