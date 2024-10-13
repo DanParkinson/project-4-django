@@ -134,6 +134,39 @@ If done correctly, both local and Heroku deployment should work.
 <details>
 <summary>Click me</summary>
 
+Add white noise to middleware. Make sure it is the same location as the photo.
+
+![Settings secret key](docs/heroku_deployment/16-whitenoise.png)
+
+add a static root to elite/settings.py
+
+![Settings secret key](docs/heroku_deployment/17-staticpath.png)
+
+collect static in the terminal.
+
+![Settings secret key](docs/heroku_deployment/18-collectstatic.png)
+
+create a runtime.txt file with your version of python IDE. you can get this through the terminal command *python -v*
+
+![Settings secret key](docs/heroku_deployment/19-runtime.png)
+
+set debug to False.
+
+![Settings secret key](docs/heroku_deployment/20-debug.png)
+
+remove the configvar in Heroku of DISABLE_COLLECTSTATIC.
+
+![Settings secret key](docs/heroku_deployment/21-disablecollectstatic.png)
+
+Deploy the site and static files should now load.
+
+![Settings secret key](docs/heroku_deployment/22-deployedsite.png)
+
+set debug back to True.
+
+![Settings secret key](docs/heroku_deployment/23-debugtrue.png)
+
+Now to do the same with JS. 
 
 
 </details>
