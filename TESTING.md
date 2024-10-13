@@ -51,4 +51,11 @@ Admin login now functions correctly.
 
 ## Creating Templates 
 
+<details>
+<summary>Click me</summary>
+
+
+
+</details>
+
 ## Connecting CSS and JS
