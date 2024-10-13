@@ -8,7 +8,6 @@ Getting the live deployed site working. This is well documented in the latter se
 
 ## Checking website loads hompage
 
-
 <details>
 <summary>Click me</summary>
 
@@ -94,5 +93,17 @@ I initally recieved the error below. After chaging *STATIC_URL = '/static/'* in 
 Server with backgorund colour.
 
 ![CSS](docs/testing/style05.png)
+
+Create script.js in static directory.
+
+![JS](docs/heroku_deployment/24-js.png)
+
+Connect script.js to base.html.
+
+![JS](docs/heroku_deployment/25-base.html.png)
+
+Check server loads message in developer tools.
+
+![JS](docs/heroku_deployment/26-jsmessage.png)
 
 </details>
