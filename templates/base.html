@@ -1,0 +1,19 @@
+<!-- templates/base.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include 'partials/head.html' %}
+</head>
+
+<body>
+    {% include 'partials/header.html' %}
+    {% include 'partials/navbar.html' %}
+
+    <div class="content">
+        {% block content %}{% endblock %}
+    </div>
+
+    {% include 'partials/footer.html' %}
+</body>
+
+</html>
