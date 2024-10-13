@@ -54,8 +54,45 @@ Admin login now functions correctly.
 <details>
 <summary>Click me</summary>
 
+Create a top level directory to include your templates 
 
+![Templates](docs/testing/templates-01.png)
+
+connect the templates directory to *elite/settings.py*
+
+![Templates](docs/testing/templates-02.png)
+
+![Templates](docs/testing/templates-03.png)
+
+Once the templates partials are populated. The server looks like this
+
+![Templates](docs/testing/templates-04.png)
 
 </details>
 
 ## Connecting CSS and JS
+
+<details>
+<summary>Click me</summary>
+
+Connect the static directory to *elite/settings.py*.
+
+![CSS](docs/testing/style01.png)
+
+Create you style.css as shown at the top level.
+
+![CSS](docs/testing/style02.png)
+
+Edit head.html to load sytle sheet.
+
+![CSS](docs/testing/style03.png)
+
+I initally recieved the error below. After chaging *STATIC_URL = '/static/'* in elite/setting.py the style sheet connected.
+
+![CSS](docs/testing/style04.png)
+
+Server with backgorund colour.
+
+![CSS](docs/testing/style05.png)
+
+</details>
