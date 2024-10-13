@@ -7,7 +7,15 @@ def reserve_table(request):
     if request.method == 'POST': # If user is submitting form
         form = ReservationForm(request.POST)
         if form.is_valid():
-            # needs stuff for saving to the database
+            Reservation.objects.create(
+                name=form.cleaned_data['name'],
+                email=form.cleaned_data['email'],
+                phone_number=form.cleaned_data['phone_number'],
+                number_of_guests=form.cleaned_data['number_of_guests'],
+                date=form.cleaned_data['date'],
+                time=form.cleaned_data['time'],
+                special_occasion=form.cleaned_data['special_occasion'],
+            )
             return render(request, 'reservations/success.html', {'form' : form})
     else:
         form = ReservationForm() # If user not submitting form then they want a form
