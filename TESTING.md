@@ -113,12 +113,18 @@ Check server loads message in developer tools.
 <details>
 <summary>Click me</summary>
 
-First i created the form to be able tosubmit a reservation and a success page
+First I created the form to be able to submit a reservation and a success page
 
 ![Reservation form](docs/testing/reservations01.png)
 
 ![Success page](docs/testing/reservations02.png)
 
 Now to create the link to the database. 
+
+![Reservations in Admin page](docs/testing/reservations03.png)
+
+And to style the admin display so it is clearer
+
+![Saved reservation](docs/testing/reservations04.png)
 
 </details>
