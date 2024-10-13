@@ -19,5 +19,6 @@ from django.urls import path, include
 
 urlpatterns = [
     path('', include('home.urls')),  # Points to the home app
+    path('reservations/', include('reservations.urls')), # reservtations app
     path('admin/', admin.site.urls),
 ]
