@@ -62,9 +62,18 @@ Focus for Phase 3 is creating a reservations model. I need a form for users to s
 
 Now that I have a form to submit, a database to save the information and the admin panel is styled nicely. We need to add validation to the submittable form.
 
-- Opening hours
+- Opening hours and 15 minute intervals
 - Date that hasnt happened yet
 - Number of people capped at 8 
+- Phone numnber is a number 
 
+The next step is to make sure that users cant double book. I will have to create a model for tables and connected them to bookings. This will be done at a later phase.
 
+![Phase3](docs/agile/phase3.png)
 </details>
+
+## Phase 4
+
+Now that users can submit a reservation and it is saved to the database. I think navigation around the website will speed up processes. Time to fix the nav bar to include *Home, Make a Reservation, Login, Logout, SignUp. 
+
+I havent decided if logging in is actually necessary for this project as users can just get email confirmation of the booking. If users dont need to login then a cancellation/alteration page will be added for users to engage with.
