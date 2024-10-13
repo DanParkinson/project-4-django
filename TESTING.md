@@ -127,4 +127,18 @@ And to style the admin display so it is clearer
 
 ![Saved reservation](docs/testing/reservations04.png)
 
+### Testing reservation inputs 
+
+multiple tests have been performed to check the reservations form works correctly.
+
+- Phone number has to be numeric *The letter e can be entered into the IntergerField fo some reason. Maybe because e is a number *
+- Date starts at todays date.
+- time intervals are set to every 15 minutes
+- Number of people is capped betweeen 1-8
+- Email has to be an email because of EmailField
+
+### Testing double booking 
+
+THIS WILL BE DONE AT A LATER DATE.
+
 </details>
