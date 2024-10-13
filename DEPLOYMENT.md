@@ -128,3 +128,12 @@ Add secret key as a config-var to Heroku. The name should be SECRET_KEY. The val
 If done correctly, both local and Heroku deployment should work.
 
 </details>
+
+## Deploy Static Files
+
+<details>
+<summary>Click me</summary>
+
+
+
+</details>
