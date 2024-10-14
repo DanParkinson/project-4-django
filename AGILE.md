@@ -80,4 +80,31 @@ I havent decided if logging in is actually necessary for this project as users c
 
 The navbar has been set up with links to the homepage, make a reservation, about us and menu. Now for the social media icons to be linked to social accounts. 
 
+unique index or unique key psotgres
 
+table option.
+call to databse for tht given day for reservation. this will be list of items then convert to dictionary for time and availability. 
+
+## phase 5 
+
+This will be about user authentication using django AllAuth.
+
+## Phase 6 
+
+Users can delete or edit reservations 
+
+## Phase 7 
+
+Admin overview of reservations 
+
+## Phase 8 
+
+Link reservtions to a Seating plan arrangement to stop people double booking. 
+
+## Phase 9 
+
+Create an interactive view for user bookings to show only available bookings. 
+
+## Phase 10 
+
+Style pages 
