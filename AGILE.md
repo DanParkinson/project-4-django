@@ -74,37 +74,27 @@ The next step is to make sure that users cant double book. I will have to create
 
 ## Phase 4
 
+<details>
+<summary>Click me</summary>
+
 Now that users can submit a reservation and it is saved to the database. I think navigation around the website will speed up processes. Time to fix the nav bar to include *Home, Make a Reservation, Login, Logout, SignUp, menu, about us.
 
 I havent decided if logging in is actually necessary for this project as users can just get email confirmation of the booking. If users dont need to login then a cancellation/alteration page will be added for users to engage with. This means that the reservations will need a unique code for users to edit their information. 
 
 The navbar has been set up with links to the homepage, make a reservation, about us and menu. Now for the social media icons to be linked to social accounts. 
 
-unique index or unique key psotgres
+I have decided to implement a login user function so the navbar will be updated with these once it is done. At this point the social media icons will be implemented into the footer. 
 
-table option.
-call to databse for tht given day for reservation. this will be list of items then convert to dictionary for time and availability. 
+![Phase4](docs/agile/phase4.png)
+
+</details>
 
 ## phase 5 
 
 This will be about user authentication using django AllAuth.
 
-## Phase 6 
-
-Users can delete or edit reservations 
-
-## Phase 7 
-
-Admin overview of reservations 
-
-## Phase 8 
-
-Link reservtions to a Seating plan arrangement to stop people double booking. 
-
-## Phase 9 
-
-Create an interactive view for user bookings to show only available bookings. 
-
-## Phase 10 
-
-Style pages 
+- Install `allauth` package
+- Add allauth to installed applications in settings.py
+- Add login/logout redirects back to index page
+- Perform migrations
+- Adapt navigation bar using Django Templates to to give registered/unregistered site users different menu options
