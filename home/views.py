@@ -8,4 +8,10 @@ def homepage(request):
 def make_reservation(request):
     form = ReservationForm()  # Create an instance of the form
     return render(request, 'reservations/reserve_table.html', {'form' : form})
+
+def about_us(request):
+    return render(request, 'home/about_us.html')  # New "About Us" page
+
+def menu(request):
+    return render(request, 'home/menu.html')  # New "Menu" page
     
