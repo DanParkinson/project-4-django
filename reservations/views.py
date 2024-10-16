@@ -45,3 +45,12 @@ def edit_reservation(request, reservation_id):
         form = ReservationForm(instance=reservation)  # Pre-fill the form with existing data
 
     return render(request, 'reservations/edit_reservation.html', {'form': form})
+
+    def delete_reservation(request, reservation_id):
+        reservation = get_object_or_404(Reservation, id = reservation_id, user = request.user)
+        if request.method == 'POST':  # Deleting only on POST request
+            reservation.delete()
+            return redirect('my_reservations')  # Redirect back to the user's reservations after deletion
+        
+        return render(request, 'reservations/confirm_delete.html', {'reservation': reservation})
+
