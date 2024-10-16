@@ -162,4 +162,12 @@ Check allauth working with nav links. Allauth did the hard work for signup/login
 
 ![authenticated view](docs/testing/authentication03.png)
 
+To make users log in before making a reservation. The following code was added:
+
+![reservations/views.py](docs/testing/authentication04.png)
+
+![elite/settings.py](docs/testing/authentication05.png)
+
+Now when a non authenticated user trys to reserve they are redirected to log in page
+
 </details>
