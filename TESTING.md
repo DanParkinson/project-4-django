@@ -215,3 +215,28 @@ To allow me to edit the reservation I had to:
 - Edit the my_reservation.html for loop that loads reservations to have an edit button that links to the unique reservation_id that django creates. 
 
 </details>
+
+## Delete reservation 
+
+<details>
+<summary>Click me</summary>
+
+Users can now delete reservations 
+
+Multiple reservation for one user
+
+![reservation in my reservations](docs/testing/delete_reservation01.png)
+
+When pressing delete user is linked to delete confirmation page 
+
+![reservation delete page](docs/testing/delete_reservation02.png)
+
+When pressing confirm user is redirected to my_reservations and the reervations is deleted.
+
+![reservation deleted](docs/testing/delete_reservation03.png)
+
+The admin page shows the reservation was successfully deleted form the database
+
+![reservation deleted in admin page](docs/testing/delete_reservation04.png)
+
+</details>
