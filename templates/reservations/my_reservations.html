@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>My Reservations</h2>
+
+{% if reservations %}
+    <ul>
+        {% for reservation in reservations %}
+            <li>
+                {{ reservation.date }} at {{ reservation.time }} - {{ reservation.number_of_guests }} guests
+                <br>
+                Special Occasion: {{ reservation.special_occasion }}
+                <br>
+            </li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>You have no reservations.</p>
+{% endif %}
+{% endblock %}

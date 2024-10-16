@@ -187,4 +187,6 @@ I contacted student support who advised me to change to the sqlite3 database fro
 
 To test that the users are connected to the reservation I now need to create some users, reservations and a html page called user_reservations to be able to view them. 
 
+![user reservations displaying](docs/testing/authenticating_reservations04.png)
+
 </details>

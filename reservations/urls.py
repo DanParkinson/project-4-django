@@ -3,5 +3,5 @@ from . import views
 
 urlpatterns = [
     path('reserve/', views.reserve_table, name='make_reservation'),  # The URL pattern name should be 'make_reservation'
-    path('my_reservations/', views.my_reservations, name='my_reservations'), # Path for viewing user's reservations
+    path('my-reservations/', views.my_reservations, name='my_reservations'), # Path for viewing user's reservations
 ]
