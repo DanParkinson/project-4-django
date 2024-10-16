@@ -93,12 +93,12 @@ I have decided to implement a login user function so the navbar will be updated 
 
 This will be about user authentication using django AllAuth.
 
-- Install `allauth` package
-- Add allauth to installed applications in settings.py
-- Add login/logout redirects back to index page
-- Perform migrations
+- Install `allauth` package.
+- Add allauth to installed applications in settings.py.
+- Add login/logout redirects back to index page.
+- Perform migrations.
 - Adapt navigation bar using Django Templates to to give registered/unregistered site users different menu options
 - reservations can only be made by authenticated users. 
 - Now the user needs to be linked with any reservation they make. simple edit to reservation model and views.
-- This caused problems with the database so changed to sqlite3 
+- This caused problems with the database so changed to sqlite3 adn remigrated.
 - now to create users, reservation(That are hopefully linked to users) and create html that shows a logged in users reservations. 

@@ -24,3 +24,10 @@ def reserve_table(request):
     else:
         form = ReservationForm() # If user not submitting form then they want a form
     return render(request, 'reservations/reserve_table.html', {'form': form})
+
+
+# For users to see their reservations
+@login_required  # Users must be logged in to access this view
+def my_reservations(request):
+    reservations = Reservation.objects.filter(user=request.user)
+    return render(request, 'reservations/my_reservations.html', {'reservations': reservations})
