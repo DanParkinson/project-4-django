@@ -98,4 +98,5 @@ This will be about user authentication using django AllAuth.
 - Add login/logout redirects back to index page
 - Perform migrations
 - Adapt navigation bar using Django Templates to to give registered/unregistered site users different menu options
-- reservations can only be made authenticated users. 
+- reservations can only be made by authenticated users. 
+- Now the user needs to be linked with any reservation they make. simple edit to reservation model and views.
