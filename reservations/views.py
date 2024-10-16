@@ -1,9 +1,11 @@
+from django.contrib.auth.decorators import login_required # users must log in to reserve
 from django.shortcuts import render
 from .forms import ReservationForm # Imports form for reservation
 from .models import Reservation
 
 # Create your views here.
 
+@login_required  # Users must be logged in to access this view
 def reserve_table(request):
     if request.method == 'POST': # If user is submitting form
         form = ReservationForm(request.POST)
