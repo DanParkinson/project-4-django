@@ -128,5 +128,7 @@ After creating the edit form reponse an error was thrown. Apparently i need a mo
 - Now that users can edit their reservations they need to be able to delete them.
 
 - Users need to be able to see their reservations in date/time order on their reservation page
+This was a simple edit to my_reservations view. I ran into trouble understanding the difference between the models and the variables as i had called them similar things. Time to start planning names a bit more clearly. 
+
 
 </details>

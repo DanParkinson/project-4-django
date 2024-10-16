@@ -43,24 +43,24 @@ def my_reservations(request):
 # Users can edit their reservations
 @login_required  # Users must be logged in to access this view
 def edit_reservation(request, reservation_id):
-    reservation = get_object_or_404(Reservation, id = reservation_id, user = request.user)
+    user_reservation = get_object_or_404(Reservation, id = reservation_id, user = request.user)
     if request.method == 'POST':
-        form = ReservationForm(request.POST, instance=reservation)
+        form = ReservationForm(request.POST, instance=user_reservation)
         if form.is_valid():
             form.save()  # Save the updated reservation
             return redirect('my_reservations')  # Redirect to my reservations page
     else:
-        form = ReservationForm(instance=reservation)  # Pre-fill the form with existing data
+        form = ReservationForm(instance=user_reservation)  # Pre-fill the form with existing data
 
     return render(request, 'reservations/edit_reservation.html', {'form': form})
 
 # users can delete their reservations
 @login_required  # Users must be logged in to access this view
 def delete_reservation(request, reservation_id):
-    reservation = get_object_or_404(Reservation, id = reservation_id, user = request.user)
+    user_reservation = get_object_or_404(Reservation, id = reservation_id, user = request.user)
     if request.method == 'POST':  # Deleting only on POST request
-        reservation.delete()
+        user_reservation.delete()
         return redirect('my_reservations')  # Redirect back to the user's reservations after deletion
         
-    return render(request, 'reservations/confirm_delete.html', {'reservation': reservation})
+    return render(request, 'reservations/confirm_delete.html', {'reservation': user_reservation})
 
