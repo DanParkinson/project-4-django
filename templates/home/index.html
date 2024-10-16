@@ -4,4 +4,14 @@
 
 {% block content %}
     <h2>Welcome to the homepage!</h2>
+
+    {% if next_reservation %}
+        <p>Your next reservation:</p>
+        <p>Date: {{ next_reservation.date }}</p>
+        <p>Time: {{ next_reservation.time }}</p>
+        <p>Number of Guests: {{ next_reservation.number_of_guests }}</p>
+        {% endif %}
+    {% else %}
+        <P>You have no upcoming reservations</P>
+    {% endif %}
 {% endblock %}
