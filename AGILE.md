@@ -98,3 +98,4 @@ This will be about user authentication using django AllAuth.
 - Add login/logout redirects back to index page
 - Perform migrations
 - Adapt navigation bar using Django Templates to to give registered/unregistered site users different menu options
+- reservations can only be made authenticated users. 

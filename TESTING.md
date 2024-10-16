@@ -142,3 +142,24 @@ multiple tests have been performed to check the reservations form works correctl
 THIS WILL BE DONE AT A LATER DATE.
 
 </details>
+
+## Authentication 
+
+<details>
+<summary>Click me</summary>
+
+Check allauth working with nav links. Allauth did the hard work for signup/login/logout. Just had to configure navbar.html with Django templates to check authentication. A test account was created to check it worked.
+
+ Not logged in shows this view:
+
+![Not authenticated view](docs/testing/authentication01.png)
+
+ signing up shows:
+
+![Not authenticated view sign up](docs/testing/authentication02.png)
+
+ Logged in shows:
+
+![authenticated view](docs/testing/authentication03.png)
+
+</details>
