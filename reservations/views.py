@@ -34,6 +34,7 @@ def my_reservations(request):
     return render(request, 'reservations/my_reservations.html', {'reservations': reservations})
 
 
+@login_required  # Users must be logged in to access this view
 def edit_reservation(request, reservation_id):
     reservation = get_object_or_404(Reservation, id = reservation_id, user = request.user)
     if request.method == 'POST':
@@ -46,11 +47,12 @@ def edit_reservation(request, reservation_id):
 
     return render(request, 'reservations/edit_reservation.html', {'form': form})
 
-    def delete_reservation(request, reservation_id):
-        reservation = get_object_or_404(Reservation, id = reservation_id, user = request.user)
-        if request.method == 'POST':  # Deleting only on POST request
-            reservation.delete()
-            return redirect('my_reservations')  # Redirect back to the user's reservations after deletion
+@login_required  # Users must be logged in to access this view
+def delete_reservation(request, reservation_id):
+    reservation = get_object_or_404(Reservation, id = reservation_id, user = request.user)
+    if request.method == 'POST':  # Deleting only on POST request
+        reservation.delete()
+        return redirect('my_reservations')  # Redirect back to the user's reservations after deletion
         
-        return render(request, 'reservations/confirm_delete.html', {'reservation': reservation})
+    return render(request, 'reservations/confirm_delete.html', {'reservation': reservation})
 
