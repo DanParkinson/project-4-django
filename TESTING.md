@@ -270,3 +270,16 @@ Non logged in users see:
 ![non logged in user homepage](docs/testing/homepage_reservations03.png)
 
 </details>
+
+## reservations update display when reservation passed booking time.
+
+<details>
+<summary>Click me</summary>
+
+A user has this booking. I need to wait and see if their booking updates to their next reservation after the time slot has passed.
+
+![near expiration booking](docs/testing/outdated-reservations01.png)
+
+- The reservation does not remove when the time is passed. this will be the next thing to focus on. 
+
+</details>

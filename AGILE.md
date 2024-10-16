@@ -136,6 +136,8 @@ This was a simple edit to my_reservations view. I ran into trouble understanding
 
 This phase was a great way to manipulate database models and display data in html pages.
 
+- I also need to check that the reservations update when their latest reservation time is passed. 
+
 </details>
 
 ## Phase 7 
