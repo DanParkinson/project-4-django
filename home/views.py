@@ -1,13 +1,20 @@
 from django.shortcuts import render # render handles HttpResponse
 from reservations.forms import ReservationForm
-
-# for loading the home reservation view
+# for loading the homepage view
 from django.utils import timezone
 from reservations.models import Reservation
+from django.contrib.auth.decorators import login_required # users must log in to reserve
 
 
 def homepage(request):
-    return render(request, 'home/index.html')
+    now = timezone.now()
+    next_reservation = None # for not logged in users
+
+    # for displaying the logged in users next reservation
+    if request.user.is_authenticated: # check if logged in
+        next_reservation = Reservation.objects.filter(user=request.user,date__gte=now.date()).order_by('date', 'time').first()
+
+    return render(request, 'home/index.html', {'next_reservation': next_reservation})
 
 def make_reservation(request):
     form = ReservationForm()  # Create an instance of the form
@@ -19,12 +26,5 @@ def about_us(request):
 def menu(request):
     return render(request, 'home/menu.html')  #"Menu" page
 
-# loads the logged in users next reservation onto the homepage
-def home_reservation_view(request):
-    now = timezone.now()
-
-    next_reservation = Reservations.objects.filter(user=request.user,date__gte=now.date()).order_by('date', 'time').first()
-
-    return render(request, 'home.html', {'next_reservation': next_reservation})
 
     
