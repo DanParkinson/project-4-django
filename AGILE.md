@@ -117,4 +117,5 @@ Now that users can authories themselves and they are connected to their reservat
 
 After creating the edit form reponse an error was thrown. Apparently i need a modelform to handle the data instead of a normal form as i am accessing the database. modelforms need a meta class. 
 
-Now that users can edit their reservations they need to be able to delete them.
+- Now that users can edit their reservations they need to be able to delete them.
+- Users need to be able to see their reservations in date/time order on their reservation page
