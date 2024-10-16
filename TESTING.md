@@ -246,6 +246,27 @@ The admin page shows the reservation was successfully deleted form the database
 <details>
 <summary>Click me</summary>
 
+Reservations now show in time order
 
+![my reservations in time order](docs/testing/reservation_order01.png)
+
+</details>
+
+## Homepage shows the latest reservation
+
+<details>
+<summary>Click me</summary>
+
+logged in users without next reservation see:
+
+![hompepage blank reservation](docs/testing/homepage_reservations01.png)
+
+logged in users with a reservation see: 
+
+![hompepage next reservation](docs/testing/homepage_reservations02.png)
+
+Non logged in users see:
+
+![non logged in user homepage](docs/testing/homepage_reservations03.png)
 
 </details>
