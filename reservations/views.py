@@ -3,9 +3,11 @@ from django.shortcuts import render
 from .forms import ReservationForm # Imports form for reservation
 from .models import Reservation
 from django.shortcuts import get_object_or_404, redirect # for editing reservations
+from django.utils import timezone # for displaying my_reservations in time order
 
 # Create your views here.
 
+# Users to be able to reserve a table
 @login_required  # Users must be logged in to access this view
 def reserve_table(request):
     if request.method == 'POST': # If user is submitting form
@@ -27,13 +29,18 @@ def reserve_table(request):
     return render(request, 'reservations/reserve_table.html', {'form': form})
 
 
-# For users to see their reservations
+# For users to see their reservations in time order
 @login_required  # Users must be logged in to access this view
 def my_reservations(request):
-    reservations = Reservation.objects.filter(user=request.user)
-    return render(request, 'reservations/my_reservations.html', {'reservations': reservations})
+    
+    now = timezone.now() # Get the current date and time
 
+    # Retrieve the user's reservations ordered by date and time (closest first)
+    user_reservations = Reservation.objects.filter(user = request.user, date__gte=now.date()).order_by('date', 'time')
 
+    return render(request, 'reservations/my_reservations.html', {'reservations': user_reservations})
+
+# Users can edit their reservations
 @login_required  # Users must be logged in to access this view
 def edit_reservation(request, reservation_id):
     reservation = get_object_or_404(Reservation, id = reservation_id, user = request.user)
@@ -47,6 +54,7 @@ def edit_reservation(request, reservation_id):
 
     return render(request, 'reservations/edit_reservation.html', {'form': form})
 
+# users can delete their reservations
 @login_required  # Users must be logged in to access this view
 def delete_reservation(request, reservation_id):
     reservation = get_object_or_404(Reservation, id = reservation_id, user = request.user)

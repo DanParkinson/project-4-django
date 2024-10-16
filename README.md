@@ -209,4 +209,6 @@ https://docs.djangoproject.com/en/3.0/ref/validators/
 
 https://stackoverflow.com/questions/60246268/how-to-display-django-success-message-in-every-template-from-one-view
 
+https://www.vintasoftware.com/blog/advanced-django-querying-sorting-events-date
+
 [Back to top](#README)
