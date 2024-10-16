@@ -130,5 +130,12 @@ After creating the edit form reponse an error was thrown. Apparently i need a mo
 - Users need to be able to see their reservations in date/time order on their reservation page
 This was a simple edit to my_reservations view. I ran into trouble understanding the difference between the models and the variables as i had called them similar things. Time to start planning names a bit more clearly. 
 
+- Users can view their next reservation on the homepage if logged in. 
+
+![Phase6](docs/agile/phase6.png)
+
+This phase was a great way to manipulate database models and display data in html pages.
 
 </details>
+
+## Phase 7 
