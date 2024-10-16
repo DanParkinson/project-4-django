@@ -3,7 +3,7 @@ from reservations.forms import ReservationForm
 
 # for loading the home reservation view
 from django.utils import timezone
-from .models import Reservation
+from reservations.models import Reservation
 
 
 def homepage(request):
