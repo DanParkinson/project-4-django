@@ -170,4 +170,21 @@ To make users log in before making a reservation. The following code was added:
 
 Now when a non authenticated user trys to reserve they are redirected to log in page
 
+
+## Linking reservations to user accounts.
+
+This didn't go very well. I updated code to link the reservations:
+
+![model code](docs/testing/authenticating_reservations01.png)
+
+![view code](docs/testing/authenticating_reservations02.png)
+
+After this i tried to migrate but forgot that now there are empty fields. I dropped my reservation database and created a new version. this threw an error when accessing the reservation model from the admin page:
+
+![error code](docs/testing/authenticating_reservations03.png)
+
+I contacted student support who advised me to change to the sqlite3 database from now on and remigrate to a postgreSQL databse later on when my models are finished.
+
+To test that the users are connected to the reservation I now need to create some users, reservations and a html page called user_reservations to be able to view them. 
+
 </details>
