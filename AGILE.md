@@ -101,4 +101,5 @@ This will be about user authentication using django AllAuth.
 - reservations can only be made by authenticated users. 
 - Now the user needs to be linked with any reservation they make. simple edit to reservation model and views.
 - This caused problems with the database so changed to sqlite3 adn remigrated.
-- now to create users, reservation(That are hopefully linked to users) and create html that shows a logged in users reservations. 
+- now to create users, reservation(That are hopefully linked to users) and create html that shows a logged in users reservations.
+- Now to link the my_reservations page into the nav bar for authenticated users 
