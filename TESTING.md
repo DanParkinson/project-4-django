@@ -170,8 +170,12 @@ To make users log in before making a reservation. The following code was added:
 
 Now when a non authenticated user trys to reserve they are redirected to log in page
 
+</details>
 
 ## Linking reservations to user accounts.
+
+<details>
+<summary>Click me</summary>
 
 This didn't go very well. I updated code to link the reservations:
 
@@ -188,5 +192,26 @@ I contacted student support who advised me to change to the sqlite3 database fro
 To test that the users are connected to the reservation I now need to create some users, reservations and a html page called user_reservations to be able to view them. 
 
 ![user reservations displaying](docs/testing/authenticating_reservations04.png)
+
+</details>
+
+## Edit a reservation
+
+<details>
+<summary>Click me</summary>
+
+Users can now edit reservations. 
+
+![reservation in admin page](docs/testing/edit_reservation01.png)
+
+![reservation in logged in user view](docs/testing/edit_reservation02.png)
+
+![reservation edited using the edit function](docs/testing/edit_reservation03.png)
+
+To allow me to edit the reservation I had to:
+
+- Create an edit_reservation view to handle the request
+- Update my reservation form to a ModelForm which allows it access the database. It needs to this because of the instance in the edit_reservation view that pre populates the information in the form. ModelForms need a class meta.
+- Edit the my_reservation.html for loop that loads reservations to have an edit button that links to the unique reservation_id that django creates. 
 
 </details>
