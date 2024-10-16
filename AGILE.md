@@ -114,3 +114,6 @@ Now that users can authories themselves and they are connected to their reservat
 - Next to the reservations should be a button called edit that brings them to an edit reservations form.
 - Another button called delete reservation should be next to that which removes the reservations entirely.
 - Users need access to only their reservations.
+
+
+After creating the edit form reponse an error was thrown. Apparently i need a modelform to handle the data instead of a normal form as i am accessing the database. modelforms need a meta class.

@@ -44,4 +44,4 @@ def edit_reservation(request, reservation_id):
     else:
         form = ReservationForm(instance=reservation)  # Pre-fill the form with existing data
 
-return render(request, 'reservations/edit_reservation.html', {'form': form})
+    return render(request, 'reservations/edit_reservation.html', {'form': form})
