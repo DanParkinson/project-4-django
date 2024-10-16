@@ -102,4 +102,15 @@ This will be about user authentication using django AllAuth.
 - Now the user needs to be linked with any reservation they make. simple edit to reservation model and views.
 - This caused problems with the database so changed to sqlite3 adn remigrated.
 - now to create users, reservation(That are hopefully linked to users) and create html that shows a logged in users reservations.
-- Now to link the my_reservations page into the nav bar for authenticated users 
+- Now to link the my_reservations page into the nav bar for authenticated users.
+
+![Phase5](docs/agile/phase5.png)
+
+Now that users can authories themselves and they are connected to their reservations. Users now need to be able to updated or cancel a reservation if necessary. 
+
+## Phase 6
+
+- Logged in users can access their reservations using my_reservations.
+- Next to the reservations should be a button called edit that brings them to an edit reservations form.
+- Another button called delete reservation should be next to that which removes the reservations entirely.
+- Users need access to only their reservations.

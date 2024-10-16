@@ -2,6 +2,7 @@ from django.contrib.auth.decorators import login_required # users must log in to
 from django.shortcuts import render
 from .forms import ReservationForm # Imports form for reservation
 from .models import Reservation
+from django.shortcuts import get_object_or_404, redirect # for editing reservations
 
 # Create your views here.
 
@@ -31,3 +32,16 @@ def reserve_table(request):
 def my_reservations(request):
     reservations = Reservation.objects.filter(user=request.user)
     return render(request, 'reservations/my_reservations.html', {'reservations': reservations})
+
+
+def edit_reservation(request, reservation_id):
+    reservation = get_object_or_404(Reservation, id = reservation_id, user = request.user)
+    if request.method == 'POST':
+        form = ReservationForm(request.POST, instance=reservation)
+        if form.is_valid():
+            form.save()  # Save the updated reservation
+            return redirect('my_reservations')  # Redirect to my reservations page
+    else:
+        form = ReservationForm(instance=reservation)  # Pre-fill the form with existing data
+
+return render(request, 'reservations/edit_reservation.html', {'form': form})
