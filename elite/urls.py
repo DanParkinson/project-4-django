@@ -20,6 +20,7 @@ from home import views as home_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+     path("accounts/", include("allauth.urls")), # AllAuth
     path('', home_views.homepage, name='home'),  # Home page
     path('about-us/', home_views.about_us, name='about_us'),  # About Us page
     path('menu/', home_views.menu, name='menu'),  # Menu page
