@@ -11,6 +11,7 @@
                 <br>
                 Special Occasion: {{ reservation.special_occasion }}
                 <br>
+                <a href="{% url 'edit_reservation' reservation.id %}">Edit</a>  <!-- Edit link -->
             </li>
         {% endfor %}
     </ul>
