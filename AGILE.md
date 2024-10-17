@@ -149,3 +149,6 @@ I might bring in google/facebook sign in as well.
 - new app to handle accounts
 - add accounts link to django all auth
 - then link templates as django does all the hard work
+
+- account_update view needs creating.
+- import a form model to allow users to submit their new details
