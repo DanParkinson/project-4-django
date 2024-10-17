@@ -334,4 +334,15 @@ Users can now delete their accounts.
 
 </details>
 
+## my_reservations not showing reservations. 
+
+the reservations for users are correctly linked to the user id as shown in the python shell
+
+![ashell database of reservations](docs/testing/debugging_my_reservations01.png)
+
+so the logic must be wrong in the filter. The filter currently uses date and time but maybe the time is filtering from THE CURRENT TIME which means anything from the point of writing wont show, regardless if its on a future day.
+
+Debugging will be confusing without knowing whos logged in. lets add a message to the homepage which show whos logged in. 
+
+
 

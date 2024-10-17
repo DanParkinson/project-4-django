@@ -6,6 +6,7 @@ from django.contrib import messages
 from django.contrib.auth.forms import UserChangeForm
 from django.contrib.auth.forms import PasswordChangeForm
 from django.contrib.auth import update_session_auth_hash
+from reservations.models import Reservation
 
 
 @login_required # Users must be logged on to access this view
@@ -49,10 +50,14 @@ def password_update(request):
 
 @login_required
 def account_delete(request):
+    user = request.user
     if request.method == 'POST':
-        user = request.user
+        # delete reservations of the user
+        Reservation.object.filter(user=user).delete()
+        # delete account
         user.delete()
-        messages.success(request, "Your account has been deleted successfully.")
+        
+        messages.success(request, "Your account and reservations have been deleted successfully.")
         return redirect('home')
     return render(request, 'account/account_delete.html')
 

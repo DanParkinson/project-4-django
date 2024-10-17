@@ -153,13 +153,6 @@ I might bring in google/facebook sign in as well.
 - account_update view needs creating.
 - import a form model to allow users to submit their new details
 - Users can change their passwords.
+- users can delete their account
 
-Still needs to be done 
-- users can delete their account and all reservations 
-- registration form is now outdated because of user login credentials
-- nav bar is untidy
-
-Potentialy add
-- reset password via email
-- email confirmation on login 
-- 
+- an error has occured with my_reservations where it is filtering by the current time and filtering out any reservation that is before that time, regardless of date. This needs fixing before progessing. 
