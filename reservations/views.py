@@ -28,24 +28,19 @@ def reserve_table(request):
         form = ReservationForm() # If user not submitting form then they want a form
     return render(request, 'reservations/reserve_table.html', {'form': form})
 
-
-# For users to see their reservations in time order
 @login_required  # Users must be logged in to access this view
 def my_reservations(request):
-    
-    now = timezone.now() # Get the current date and time
-
+    now = timezone.now()  # Get the current date and time
     # Retrieve the user's reservations ordered by date and time (closest first)
     # Filters out expired reservations
     user_reservations = Reservation.objects.filter(
-        user = request.user, # get the users id
-        date__gte=now.date(), # Todays date and onwards are included 
-        time__gte=now.time()# Checks if todays time is current time or onwards
-            if now.date() == timezone.now().date()
-            else None
-        ).order_by('date', 'time') # sorts the reservations into time order
+        user=request.user, # get user id
+        date__gte=now.date(), # filter date as today onwards. removes expired reservations
+        time__gte=now.time(), # filter time as current time onwards. removes expired reservations
+        ).order_by('date') # order by date
 
     return render(request, 'reservations/my_reservations.html', {'reservations': user_reservations})
+
 
 # Users can edit their reservations
 @login_required  # Users must be logged in to access this view
