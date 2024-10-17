@@ -142,7 +142,7 @@ This phase was a great way to manipulate database models and display data in htm
 
 ## Phase 7 
 
-This will be about account management. users will be able to edit their details, delete the account and any reservations belonging to them, change their passwords. User details should also prepopulate forms when making a reservation. 
+This will be about account management. users will be able to edit their details, delete the account and any reservations belonging to them, change their passwords.
 
 I might bring in google/facebook sign in as well. 
 
@@ -152,3 +152,16 @@ I might bring in google/facebook sign in as well.
 
 - account_update view needs creating.
 - import a form model to allow users to submit their new details
+
+Still needs to be done 
+- users can change their password
+- users can delete their account and all reservations 
+- registration form is now outdated because of user login credentials
+- nav bar is untidy
+- 
+
+Potentialy add
+- reset password 
+- email confirmation on login 
+- email confimration of password change
+- 
