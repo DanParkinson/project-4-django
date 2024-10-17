@@ -21,7 +21,7 @@ def account_update(request):
         if form.is_valid():
             form.save()
             messages.success(request, "Your details have been updated.")
-            return redirect('account_details')
+            return redirect('account')
     else:
         form = UserChangeForm(instance=request.user)
 

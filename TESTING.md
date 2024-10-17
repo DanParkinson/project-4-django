@@ -289,3 +289,18 @@ A user has this booking. I need to wait and see if their booking updates to thei
 This took a long time because I was over complicating the code. simple plans are always best!
 
 </details>
+
+## Account details can now be updated
+
+<details>
+<summary>Click me</summary>
+
+![original account details](docs/testing/account_update01.png)
+
+![propsed changes to account details](docs/testing/account_update02.png)
+
+![Changed account details](docs/testing/account_update03.png)
+
+</details>
+
+## Account password change
