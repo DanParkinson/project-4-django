@@ -314,4 +314,24 @@ Users can edite their passwords when logged in
 
 </details>
 
+## Account deletion 
+
+<details>
+<summary>Click me</summary>
+
+Users can now delete their accounts.
+
+![database of users](docs/testing/account_delete02.png)
+
+
+![delete account page](docs/testing/account_delete01.png)
+
+
+![redirected to homepage](docs/testing/account_delete04.png)
+
+
+![account gone from database](docs/testing/account_delete05.png)
+
+</details>
+
 
