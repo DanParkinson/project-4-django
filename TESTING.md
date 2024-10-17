@@ -286,4 +286,6 @@ A user has this booking. I need to wait and see if their booking updates to thei
 
 ![expired reservation deleted](docs/testing/expired_reservations02.png)
 
+This took a long time because I was over complicating the code. simple plans are always best!
+
 </details>
