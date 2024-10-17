@@ -25,4 +25,5 @@ urlpatterns = [
     path('about-us/', home_views.about_us, name='about_us'),  # About Us page
     path('menu/', home_views.menu, name='menu'),  # Menu page
     path('reservations/', include('reservations.urls')),  # Reservation app
+    path('accounts/', include('accounts.urls')),  # Accounts app
 ]

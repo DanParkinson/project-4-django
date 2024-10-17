@@ -141,3 +141,11 @@ This phase was a great way to manipulate database models and display data in htm
 </details>
 
 ## Phase 7 
+
+This will be about account management. users will be able to edit their details, delete the account and any reservations belonging to them, change their passwords. User details should also prepopulate forms when making a reservation. 
+
+I might bring in google/facebook sign in as well. 
+
+- new app to handle accounts
+- add accounts link to django all auth
+- then link templates as django does all the hard work
