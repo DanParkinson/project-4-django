@@ -12,7 +12,11 @@ def homepage(request):
 
     # for displaying the logged in users next reservation
     if request.user.is_authenticated: # check if logged in
-        next_reservation = Reservation.objects.filter(user=request.user,date__gte=now.date()).order_by('date', 'time').first()
+        next_reservation = Reservation.objects.filter(
+            user=request.user, # get user id
+            date__gte=now.date(), # filter date as today onwards. removes expired reservations
+            time__gte=now.time(), # filter time as current time onwards. removes expired reservations
+        ).order_by('date').first() # order by date and show the first one 
 
     return render(request, 'home/index.html', {'next_reservation': next_reservation})
 
