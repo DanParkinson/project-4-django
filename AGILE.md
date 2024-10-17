@@ -152,16 +152,14 @@ I might bring in google/facebook sign in as well.
 
 - account_update view needs creating.
 - import a form model to allow users to submit their new details
+- Users can change their passwords.
 
 Still needs to be done 
-- users can change their password
 - users can delete their account and all reservations 
 - registration form is now outdated because of user login credentials
 - nav bar is untidy
-- 
 
 Potentialy add
-- reset password 
+- reset password via email
 - email confirmation on login 
-- email confimration of password change
 - 

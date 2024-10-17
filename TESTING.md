@@ -305,3 +305,13 @@ This took a long time because I was over complicating the code. simple plans are
 
 ## Account password change
 
+<details>
+<summary>Click me</summary>
+
+Users can edite their passwords when logged in
+
+![Password change form](docs/testing/password_update01.png)
+
+</details>
+
+

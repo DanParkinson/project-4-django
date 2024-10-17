@@ -7,14 +7,17 @@ from django.contrib.auth.forms import UserChangeForm
 from django.contrib.auth.forms import PasswordChangeForm
 from django.contrib.auth import update_session_auth_hash
 
+
 @login_required # Users must be logged on to access this view
 def account_details(request):
     return render(request, 'account/account_details.html')
+
 
 class UserChangeForm(forms.ModelForm):
     class Meta:
         model = User 
         fields = ['username', 'email']
+
 
 @ login_required
 def account_update(request):
@@ -26,8 +29,8 @@ def account_update(request):
             return redirect('account')
     else:
         form = UserChangeForm(instance=request.user)
-
     return render(request,  'account/account_update.html', {'form': form})
+
 
 @ login_required
 def password_update(request):
@@ -43,4 +46,13 @@ def password_update(request):
     else:
         form = PasswordChangeForm(user=request.user)
     return render(request,  'account/password_update.html', {'form': form})
+
+@login_required
+def account_delete(request):
+    if request.method == 'POST':
+        user = request.user
+        user.delete()
+        messages.success(request, "Your account has been deleted successfully.")
+        return redirect('home')
+    return render(request, 'account/account_delete.html')
 
