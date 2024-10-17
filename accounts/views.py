@@ -30,15 +30,17 @@ def account_update(request):
     return render(request,  'account/account_update.html', {'form': form})
 
 @ login_required
-def password_change(request):
+def password_update(request):
     if request.method == 'POST':
-        form = PasswordChangeForm(request.user, request.POST)
+        form = PasswordChangeForm(user=request.user, data=request.POST)
         if form.is_valid():
            user = form.save()
-           update_session_auth_hash(request, user)  # Important to keep the user logged in
+           update_session_auth_hash(request, form.user)  # Important to keep the user logged in
            messages.success(request, "Password changed successfully!")
            return redirect('account')
+        else:
+            messages.error(request, 'Please correct the errors below.')
     else:
-        form = PasswordChangeForm(instance=request.user)
-    return render(request,  'account/password_change.html', {'form': form})
+        form = PasswordChangeForm(user=request.user)
+    return render(request,  'account/password_update.html', {'form': form})
 
