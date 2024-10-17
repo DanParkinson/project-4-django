@@ -278,8 +278,12 @@ Non logged in users see:
 
 A user has this booking. I need to wait and see if their booking updates to their next reservation after the time slot has passed.
 
-![near expiration booking](docs/testing/outdated-reservations01.png)
+![near expiration booking](docs/testing/expired_reservations01.png)
 
 - The reservation does not remove when the time is passed. this will be the next thing to focus on. 
+
+- my_reservations updated for deleting expired reservations. 
+
+![expired reservation deleted](docs/testing/expired_reservations02.png)
 
 </details>
