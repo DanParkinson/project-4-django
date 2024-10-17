@@ -15,6 +15,10 @@
                         <a class="nav-link {% if request.path == 'account' %}active{% endif %}" aria-current="page"
                            href="{% url 'account' %}">Account</a>
                 </li>
+                <li>
+                    <a class="nav-link {% if request.path == 'account_update' %}active{% endif %}" aria-current="page"
+                           href="{% url 'account_update' %}">Update Account</a>
+                </li>
                 {% else %}
                 <li >
                     <a class="nav-link {% if request.path == signup_url %}active{% endif %}" aria-current="page"
