@@ -5,7 +5,6 @@ from django.contrib.auth.models import User  # Import the User model
 class Reservation(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)  # Link to User model
     name = models.CharField(max_length=100)
-    email = models.EmailField()
     phone_number = models.CharField(max_length=15)
     number_of_guests = models.IntegerField()
     date = models.DateField()

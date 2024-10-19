@@ -6,10 +6,9 @@ class ReservationForm(forms.ModelForm):
     # Meta class to link the form to the Reservation model
     class Meta:
         model = Reservation  # Link the form to the Reservation model
-        fields = ['name', 'email', 'phone_number', 'number_of_guests', 'date', 'time', 'special_occasion']
+        fields = ['name', 'phone_number', 'number_of_guests', 'date', 'time', 'special_occasion']
 
     name = forms.CharField(max_length=100, label='Name')
-    email = forms.EmailField(label='Email')
     number_of_guests = forms.IntegerField(min_value=1, label='Number of Guests', max_value=8)
     special_occasion = forms.CharField(max_length=200, required=False, label='Special Occasion')
 

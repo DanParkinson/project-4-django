@@ -155,9 +155,21 @@ I might bring in google/facebook sign in as well.
 - Users can change their passwords.
 - users can delete their account
 
-- an error has occured with my_reservations where it is filtering by the current time and filtering out any reservation that is before that time, regardless of date. This needs fixing before progessing. If its the issue that i think it is I should be able to see the reservations in the morning. lets hope because its end of session. 
+- an error has occured with my_reservations where it is filtering by the current time and filtering out any reservation that is before that time, regardless of date. This needs fixing before progessing. If its the issue that i think it is I should be able to see the reservations in the morning. lets hope because its end of session. TO BE FIXED!!!!!!!!!!!!!!
 
 
+Now that it was decided that users have to log in to access reservations. The Reservation model is now inefficient.
+
+Reservations should require 
+- User 
+- Name 
+- Phone number
+- Date
+- Time
+- Number of people
+- Special Occasion
+
+Email is used in logging in so is already aquired. Time to update it. 
 
 
 
