@@ -173,8 +173,7 @@ Email is used in logging in so is already aquired. Time to update it.
 
 ## Phase 8
 
-Now that the bulk of the backend is working correctly i want to style my webiste. 
-
+Now that the bulk of the backend is working correctly i want to style my webiste. My bootstrap is a bit rusty so I need to relearn how to use it. 
 
 ## Final tests to remember 
 
