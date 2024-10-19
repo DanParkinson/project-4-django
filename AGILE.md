@@ -155,4 +155,4 @@ I might bring in google/facebook sign in as well.
 - Users can change their passwords.
 - users can delete their account
 
-- an error has occured with my_reservations where it is filtering by the current time and filtering out any reservation that is before that time, regardless of date. This needs fixing before progessing. 
+- an error has occured with my_reservations where it is filtering by the current time and filtering out any reservation that is before that time, regardless of date. This needs fixing before progessing. If its the issue that i think it is I should be able to see the reservations in the morning. lets hope because its end of session. 

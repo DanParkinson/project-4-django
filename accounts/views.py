@@ -53,7 +53,7 @@ def account_delete(request):
     user = request.user
     if request.method == 'POST':
         # delete reservations of the user
-        Reservation.object.filter(user=user).delete()
+        Reservation.objects.filter(user=user).delete()
         # delete account
         user.delete()
         
