@@ -16,7 +16,6 @@ def reserve_table(request):
             Reservation.objects.create(
                 user=request.user,  # Link reservation to the logged-in user
                 name=form.cleaned_data['name'],
-                email=form.cleaned_data['email'],
                 phone_number=form.cleaned_data['phone_number'],
                 number_of_guests=form.cleaned_data['number_of_guests'],
                 date=form.cleaned_data['date'],
