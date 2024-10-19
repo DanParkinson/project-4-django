@@ -138,6 +138,17 @@ The above exercise indicates that overall importance/feasibility scores were sim
 
 ### Colour Schema 
 
+I have gone for 
+
+[Colour Schema](docs/colour-schema.png)
+
+#001F3F
+#3A6D8C
+#6A9AB0
+#EAD8B1
+
+
+
 ### Database Design 
 Entity Relationship Diagrams help to visualise database architecture before creating models in Django.  Understanding the relationships between different tables can save time recoding later in the project.
 

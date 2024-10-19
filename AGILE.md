@@ -171,7 +171,9 @@ Reservations should require
 
 Email is used in logging in so is already aquired. Time to update it. 
 
+## Phase 8
 
+Now that the bulk of the backend is working correctly i want to style my webiste. 
 
 
 ## Final tests to remember 
