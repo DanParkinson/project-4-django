@@ -106,6 +106,19 @@ Check server loads message in developer tools.
 
 ![JS](docs/heroku_deployment/26-jsmessage.png)
 
+### Bootstrap 
+
+Using bootsrap CDN in head.html
+
+![Boottsrap CDN](docs/testing/Bootstrap01.png)
+
+The home page is now styled with bootstrap
+
+
+![Homepage styled](docs/testing/Bootstrap02.png)
+
+
+
 </details>
 
 ## Reservations app 
