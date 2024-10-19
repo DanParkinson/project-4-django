@@ -156,3 +156,52 @@ I might bring in google/facebook sign in as well.
 - users can delete their account
 
 - an error has occured with my_reservations where it is filtering by the current time and filtering out any reservation that is before that time, regardless of date. This needs fixing before progessing. If its the issue that i think it is I should be able to see the reservations in the morning. lets hope because its end of session. 
+
+
+
+
+
+
+## Final tests to remember 
+
+1. Users can create account.
+
+- Users can sign out  
+- Users can sign in (with google?)
+- Users can edit details and they are updated to databse(relogin)  
+- Users can change password  
+- Users can delete their account and any reservations made  
+- Users can see wh*o they are logged in as  
+
+2. Users can create reservations 
+
+- Users can edit reservations
+- Users can delete reservations
+- Users can view their next reservation
+- Users can view all reservations 
+- Expired reservations do not show
+
+3. Users can navigate
+
+- Users can access Home, Account, About us, My reservations, Make reservation, Menu, Social media
+
+4. All pages have correct information
+
+-  All page views are similar
+-  Home has links to Book, about us, menu
+-  Accounts has details, edit, change password, delete with warning messages
+-  About us has location and opening hours 
+-  My reservations show all reservations in future. They can edit and delete.
+-  make reservation has form to submit
+-  menu has all food. 
+
+5. Reservation functionaltiy
+- Users cant double book
+- Users can access reservation booking with information on how many tables are available
+- Reservation deletion updateds prior
+- Messages reinforce all of the above
+
+6. Code checkers 
+- All of the code checkers 
+
+7. 
