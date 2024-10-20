@@ -24,6 +24,9 @@
           <li class="nav-item mr-2 {% if request.path == '/accounts/' %}active{% endif %}">
              <a class="nav-link" href="{% url 'account' %}">Account</a>
           </li>
+          <li class="nav-item mr-2 {% if request.path == '/my_reservations/' %}active{% endif %}">
+            <a class="nav-link" href="{% url 'my_reservations' %}">My Reservations</a>
+         </li>
           {% endif %}
        </ul>
 
@@ -52,8 +55,7 @@
 
  </nav>
 
- <!--<a class="nav-link" href="{% url 'my_reservations' %}">My Reservations</a>
-    <a class="nav-link" href="{% url 'account_update' %}">Update Account</a>
+    <!-- <a class="nav-link" href="{% url 'account_update' %}">Update Account</a>
     <a class="nav-link" href="{% url 'password_update' %}">Change Password</a>
     <a class="nav-link" href="{% url 'make_reservation' %}">Make a Reservation</a>
     <a class="nav-link" href="{% url 'account_delete' %}">Delete Account</a>-->
