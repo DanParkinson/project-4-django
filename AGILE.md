@@ -200,6 +200,7 @@ Now that the bulk of the backend is working correctly i want to style my webiste
 
 4. All pages have correct information
 
+-  Page titles are correct
 -  All page views are similar
 -  Home has links to Book, about us, menu
 -  Accounts has details, edit, change password, delete with warning messages

@@ -1,52 +1,25 @@
-<nav>
-    <ul>
-        <nav>
-            <ul>
-                {% if user.is_authenticated %}
-                <li>
-                    <a class="nav-link {% if request.path == logout_url %}active{% endif %}" aria-current="page"
-                        href="{% url 'account_logout' %}">Logout</a>
-                </li>
-                <li>
-                    <a class="nav-link {% if request.path == 'my_reservations' %}active{% endif %}" aria-current="page"
-                       href="{% url 'my_reservations' %}">My Reservations</a>
-                </li>
-                <li>
-                        <a class="nav-link {% if request.path == 'account' %}active{% endif %}" aria-current="page"
-                           href="{% url 'account' %}">Account</a>
-                </li>
-                <li>
-                    <a class="nav-link {% if request.path == 'account_update' %}active{% endif %}" aria-current="page"
-                           href="{% url 'account_update' %}">Update Account</a>
-                </li>
-                <li>
-                    <a class="nav-link {% if request.path == 'password_update' %}active{% endif %}" aria-current="page"
-                           href="{% url 'password_update' %}">Change Password</a>
-                </li>
-                <li>
-                    <a class="nav-link {% if request.path == 'account_delete' %}active{% endif %}" aria-current="page"
-                           href="{% url 'account_delete' %}">Delete Account</a>
-                </li>
-                <li>
-                    <span>
-                      Logged in as {{ user.username }}
-                    </span>
-                </li>
-                {% else %}
-                <li>
-                    <a class="nav-link {% if request.path == signup_url %}active{% endif %}" aria-current="page"
-                        href="{% url 'account_signup' %}">Register</a>
-                </li>
-                <li>
-                    <a class="nav-link {% if request.path == login_url %}active{% endif %}" aria-current="page"
-                        href="{% url 'account_login' %}">Login</a>
-                </li>
-                {% endif %}
-                <li><a href="{% url 'home' %}">Home</a></li>
-                <li><a href="{% url 'make_reservation' %}">Make a Reservation</a></li>
-                <li><a href="{% url 'about_us' %}">About Us</a></li>
-                <li><a href="{% url 'menu' %}">Menu</a></li>
-            </ul>
-        </nav>
-    </ul>
-</nav>
+ <nav class="navbar navbar-dark bg-dark navbar-expand-lg">
+     <a class="navbar-brand" href="{% url 'home' %}">Elite</a>
+     <ul class="navbar-nav mr-auto">
+        <li class="nav-item mr-2"><a class="nav-link" href="{% url 'home' %}">Home</a></li>
+        <li class="nav-item mr-2"><a class="nav-link" href="{% url 'about_us' %}">About Us</a></li>
+        <li class="nav-item mr-2"><a class="nav-link" href="{% url 'menu' %}">Menu</a></li>
+        {% if user.is_authenticated %}
+        <li class="nav-item mr-2"><a class="nav-link " href="{% url 'account' %}">Account</a></li>
+        {% endif %}
+     </ul>
+     <p class="navbar-text my-auto mr-2">Join us to taste Elite cuisine </p>
+     {% if user.is_authenticated %}
+     <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
+     {% else %}
+     <a class="nav-link" href="{% url 'account_signup' %}">Register</a>
+     <a class="nav-link" href="{% url 'account_login' %}">Login</a>
+     {% endif %}
+
+ </nav>
+
+ <!--<a class="nav-link" href="{% url 'my_reservations' %}">My Reservations</a>
+    <a class="nav-link" href="{% url 'account_update' %}">Update Account</a>
+    <a class="nav-link" href="{% url 'password_update' %}">Change Password</a>
+    <a class="nav-link" href="{% url 'make_reservation' %}">Make a Reservation</a>
+    <a class="nav-link" href="{% url 'account_delete' %}">Delete Account</a>-->

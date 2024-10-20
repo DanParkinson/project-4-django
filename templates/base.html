@@ -1,27 +1,28 @@
 <!-- templates/base.html -->
 {% load static %}
-
 {% url 'account_login' as login_url %}
 {% url 'account_signup' as signup_url %}
 {% url 'account_logout' as logout_url %}
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     {% include 'partials/head.html' %}
 </head>
 
 <body>
-    {% include 'partials/header.html' %}
-    {% include 'partials/navbar.html' %}
-
-    <div class="content">
-        {% block content %}{% endblock %}
-    </div>
-
+    <header>
+        <!-- Messages/Alerts -->
+        {% include 'partials/messages.html' %}
+        <!-- Navigation -->
+        {% include 'partials/navbar.html' %}
+    </header>
+    <!-- Block content-->
+    {% block content %}{% endblock %}
+    <!-- footer-->
     {% include 'partials/footer.html' %}
-    <!-- Custom JS -->
-    <script src="{% static 'js/script.js' %}"></script>
+    <!-- scripts-->
+    {% include 'partials/scripts.html' %}
 </body>
 
 </html>
