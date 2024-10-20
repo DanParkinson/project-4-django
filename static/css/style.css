@@ -1,0 +1,25 @@
+/* ------------------------------ Custom colours */
+
+/* -------------------- backgrounds*/
+
+/* navbar */
+.navbar {
+    background-color: #001F3F;
+}
+
+/* -------------------- text*/
+/*navbar links*/
+.navbar.navbar-dark .navbar-nav .nav-link {
+    color: #EAD8B1
+}
+
+/*navbar text*/
+.navbar.navbar-dark .navbar-text {
+    color: #ffffff
+}
+
+/* ------------------------------ design choices */
+/* navbar */
+.navbar {
+    border-bottom: none;
+}

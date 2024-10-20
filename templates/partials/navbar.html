@@ -1,20 +1,54 @@
- <nav class="navbar navbar-dark bg-dark navbar-expand-lg">
-     <a class="navbar-brand" href="{% url 'home' %}">Elite</a>
-     <ul class="navbar-nav mr-auto">
-        <li class="nav-item mr-2"><a class="nav-link" href="{% url 'home' %}">Home</a></li>
-        <li class="nav-item mr-2"><a class="nav-link" href="{% url 'about_us' %}">About Us</a></li>
-        <li class="nav-item mr-2"><a class="nav-link" href="{% url 'menu' %}">Menu</a></li>
-        {% if user.is_authenticated %}
-        <li class="nav-item mr-2"><a class="nav-link " href="{% url 'account' %}">Account</a></li>
-        {% endif %}
-     </ul>
-     <p class="navbar-text my-auto mr-2">Join us to taste Elite cuisine </p>
-     {% if user.is_authenticated %}
-     <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
-     {% else %}
-     <a class="nav-link" href="{% url 'account_signup' %}">Register</a>
-     <a class="nav-link" href="{% url 'account_login' %}">Login</a>
-     {% endif %}
+ <nav class="navbar navbar-dark navbar-expand-lg">
+    <!-- brand message top left-->
+    <a class="navbar-brand" href="{% url 'home' %}">Elite</a>
+
+    <!-- Navbar Toggler for small screens -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+       aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+       <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Collapasble navabr-->
+    <div class="collapse navbar-collapse" id="navbarNav">
+       <ul class="navbar-nav mr-auto">
+          <li class="nav-item mr-2">
+             <a class="nav-link" href="{% url 'home' %}">Home</a>
+          </li>
+          <li class="nav-item mr-2">
+             <a class="nav-link" href="{% url 'about_us' %}">About Us</a>
+          </li>
+          <li class="nav-item mr-2">
+             <a class="nav-link" href="{% url 'menu' %}">Menu</a>
+          </li>
+          {% if user.is_authenticated %}
+          <li class="nav-item mr-2">
+             <a class="nav-link" href="{% url 'account' %}">Account</a>
+          </li>
+          {% endif %}
+       </ul>
+
+       <!-- User welcome message and account options in top right-->
+       <ul class="navbar-nav ml-auto">
+       {% if user.is_authenticated %}
+       <li class="nav-item d-none d-lg-block">
+          <span class="navbar-text my-auto">Welcome, {{ user.username}}!</span>
+       </li>
+       <li class="nav-item">
+          <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
+       </li>
+       {% else %}
+       <li class="nav-item d-none d-lg-block">
+          <p class="navbar-text my-auto mr-2 text-white d-none d-lg-block">Join us to taste Elite cuisine </p>
+       </li>
+       <li class="nav-item">
+          <a class="nav-link" href="{% url 'account_signup' %}">Register</a>
+       </li>
+       <li class="nav-item">
+          <a class="nav-link" href="{% url 'account_login' %}">Login</a>
+       </li>
+       {% endif %}
+       </ul>
+    </div>
 
  </nav>
 
