@@ -8,12 +8,12 @@
     <!-- buttons-->
     <div class="d-flex justify-content-center mb-3 flex-wrap">
         {% if user.is_authenticated %}
-        <button class="btn custom-button flex-fill mx-1">About us</button>
+        <a class="btn custom-button flex-fill mx-1" href="{% url 'about_us' %}">About us</a>
         {% else %}
-        <button class="btn custom-button flex-fill mx-1">Sign Up</button>
+        <a class="btn custom-button flex-fill mx-1" href="{% url 'account_signup' %}">Sign Up</a>
         {% endif %}
-        <button class="btn custom-button flex-fill mx-1">Make a Reservation</button>
-        <button class="btn custom-button flex-fill mx-1">Menu</button>
+        <a class="btn custom-button flex-fill mx-1" href="{% url 'make_reservation' %}">Make a Reservation</a>
+        <a class="btn custom-button flex-fill mx-1" href="{% url 'menu' %}">Menu</a>
     </div>
 
     <!-- reservations -->
