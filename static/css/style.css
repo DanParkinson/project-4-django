@@ -13,6 +13,11 @@
 }
 
 /* -------------------- text*/
+
+h1 {
+    color:#EAD8B1;
+}
+
 /*navbar links*/
 .navbar.navbar-dark .navbar-nav .nav-link {
     color: #EAD8B1
@@ -64,4 +69,10 @@
 /*social icons change color on hover*/
 .social-icon:hover {
     color: #ffffff; 
+}
+
+/* -------------------- index.html */
+h1 {
+    text-align: center; 
+    margin-top: 20px; 
 }

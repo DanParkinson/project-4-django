@@ -2,16 +2,24 @@
 
 
 {% block content %}
-    <h2>Welcome to the homepage!</h2>
-
-    {% if user.is_authenticated %}
-        {% if next_reservation %}
-            <p>Your next reservation:</p>
-            <p>Date: {{ next_reservation.date }}</p>
-            <p>Time: {{ next_reservation.time }}</p>
-            <p>Number of Guests: {{ next_reservation.number_of_guests }}</p>
-        {% else %}
-            <P>You have no upcoming reservations</P>
-        {% endif %}
-    {% endif %}
+<div>
+    <h1>Elite</h1>
+</div>
+<div>
+    <button>Signup</button>
+    <button>Make a Reservation</button>
+    <button>Menu</button>
+</div>
+{% if user.is_authenticated %}
+{% if next_reservation %}
+<div>
+    <p>Your next reservation:</p>
+    <p>Date: {{ next_reservation.date }}</p>
+    <p>Time: {{ next_reservation.time }}</p>
+    <p>Number of Guests: {{ next_reservation.number_of_guests }}</p>
+    {% else %}
+    <P>You have no upcoming reservations</P>
+</div>
+{% endif %}
+{% endif %}
 {% endblock %}
