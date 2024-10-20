@@ -2,24 +2,40 @@
 
 
 {% block content %}
-<div>
-    <h1>Elite</h1>
+<div  class=" container flex-grow-1 d-flex flex-column justify-content-center align-items-center">
+    <!-- header-->
+    <h1 class="text-center">Elite</h1>
+    <!-- buttons-->
+    <div class="d-flex justify-content-center mb-3 flex-wrap">
+        {% if user.is_authenticated %}
+        <button class="btn custom-button flex-fill mx-1">About us</button>
+        {% else %}
+        <button class="btn custom-button flex-fill mx-1">Sign Up</button>
+        {% endif %}
+        <button class="btn custom-button flex-fill mx-1">Make a Reservation</button>
+        <button class="btn custom-button flex-fill mx-1">Menu</button>
+    </div>
+
+    <!-- reservations -->
+    <div class="d-flex flex-column align-items-center">
+        {% if user.is_authenticated %}
+        {% if next_reservation %}
+        <div class="card mb-3">
+            <div class="card-body">
+                <h2 class="card-title">Your next reservation:</h2>
+                <p>Date: {{ next_reservation.date }}</p>
+                <p>Time: {{ next_reservation.time }}</p>
+                <p>Number of Guests: {{ next_reservation.number_of_guests }}</p>
+            </div>
+        </div>
+
+        {% else %}
+        <div>
+            <P>You have no upcoming reservations</P>
+        </div>
+        {% endif %}
+        {% endif %}
+    </div>
 </div>
-<div>
-    <button>Signup</button>
-    <button>Make a Reservation</button>
-    <button>Menu</button>
-</div>
-{% if user.is_authenticated %}
-{% if next_reservation %}
-<div>
-    <p>Your next reservation:</p>
-    <p>Date: {{ next_reservation.date }}</p>
-    <p>Time: {{ next_reservation.time }}</p>
-    <p>Number of Guests: {{ next_reservation.number_of_guests }}</p>
-    {% else %}
-    <P>You have no upcoming reservations</P>
-</div>
-{% endif %}
-{% endif %}
+
 {% endblock %}
