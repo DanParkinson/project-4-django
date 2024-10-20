@@ -10,15 +10,19 @@
     {% include 'partials/head.html' %}
 </head>
 
-<body>
+<body class="d-flex flex-column min-vh-100">
     <header>
-        <!-- Messages/Alerts -->
-        {% include 'partials/messages.html' %}
         <!-- Navigation -->
         {% include 'partials/navbar.html' %}
+        <!-- Messages/Alerts -->
+        {% include 'partials/messages.html' %}
     </header>
-    <!-- Block content-->
-    {% block content %}{% endblock %}
+
+    <main class ="flex-fill">
+        <!-- Block content-->
+        {% block content %}{% endblock %}
+    </main>
+
     <!-- footer-->
     {% include 'partials/footer.html' %}
     <!-- scripts-->
