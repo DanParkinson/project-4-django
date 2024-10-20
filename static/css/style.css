@@ -19,7 +19,14 @@
 }
 
 /* ------------------------------ design choices */
-/* navbar */
+/* -------------------- navbar */
 .navbar {
     border-bottom: none;
 }
+
+/* active navbar link is underlined*/
+.navbar-nav .nav-item.active .nav-link {
+    text-decoration: underline;
+}
+
+
