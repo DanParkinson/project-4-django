@@ -10,7 +10,7 @@
         {% if user.is_authenticated %}
         <a class="btn custom-button flex-fill mx-1" href="{% url 'about_us' %}">About us</a>
         {% else %}
-        <a class="btn custom-button flex-fill mx-1" href="{% url 'account_signup' %}">Sign Up</a>
+        <a class="btn custom-button flex-fill mx-1" href="{% url 'password_update' %}">Sign Up</a>
         {% endif %}
         <a class="btn custom-button flex-fill mx-1" href="{% url 'make_reservation' %}">Make a Reservation</a>
         <a class="btn custom-button flex-fill mx-1" href="{% url 'menu' %}">Menu</a>
