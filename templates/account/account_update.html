@@ -3,11 +3,13 @@
 {% block title %}Update Account Details{% endblock %}
 
 {% block content %}
+<div class="container mt-4 menu">
     <h2>Update your details</h2>
     <form method="post">
         {% csrf_token %}
         {{ form.as_p }}
-        <button type="submit">Submit changes</button>
+        <button class="btn custom-button flex-fill mx-1" type="submit">Submit changes</button>
     </form>
     <a href="{% url 'account' %}">Cancel</a>  <!-- Link to go back to account details -->
+</div>
 {% endblock %}
